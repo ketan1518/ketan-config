@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: configserver
+  profiles:
+   # active:  native
+     active: git
+  cloud:
+    config:
+      server:
+        
+         # search-locations: "classpath:/config"
+          # search-locations: "file:/home/ketan/Documents/config"
+     
+        git:
+          uri: "https://github.com/ketan1518/ketan-config.git"
+          default-lable: main
+          clone-on-start: true
+          force-pull: true
+encrypt:
+  key: addsdsd5454d5s4d5s4ds5d4
+server:
+  port: 8071  
